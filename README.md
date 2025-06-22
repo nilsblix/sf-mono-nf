@@ -5,8 +5,10 @@ In my nixos-config, this is how I install the fonts:
 ```nix
 fonts = {
     packages = with pkgs; [
-        # other fonts.
         inputs.sf-mono-nf.packages.${pkgs.system}.default
+        # Other fonts alongside SFMono
+        nerd-fonts.meslo-lg
+        nerd-fonts.hack
     ];
 };
 ```
